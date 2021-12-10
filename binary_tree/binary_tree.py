@@ -70,9 +70,10 @@ class BinaryTree:
 def horizontal_sum(tree):
     queue = deque()
     queue.append(tree.root)
-    l_elem = len(queue)
 
+    l_elem = len(queue)
     li = []
+
     while l_elem != 0:
         count = 0
         licznik = l_elem
