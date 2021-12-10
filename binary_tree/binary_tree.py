@@ -73,9 +73,10 @@ def horizontal_sum(tree):
     l_elem = len(queue)
 
     li = []
-    while l_elem > 0:
+    while l_elem != 0:
         count = 0
-        while l_elem > 0:
+        licznik = l_elem
+        while licznik != 0:
             element = queue.popleft()
             count += element.value
 
@@ -85,7 +86,7 @@ def horizontal_sum(tree):
             if element.right_child is not None:
                 queue.append(element.right_child)
 
-            l_elem -= 1
+            licznik -= 1
 
         li.append(count)
         l_elem = len(queue)
@@ -105,8 +106,4 @@ tree.root.right_child.add_right_child(7)
 
 tree.show()
 print()
-
 print(horizontal_sum(tree))
-
-
-
